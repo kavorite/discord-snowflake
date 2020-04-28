@@ -43,3 +43,7 @@ func (s T) Process() uint8 {
 func (s T) Seq() uint16 {
 	return uint16(s & 0xfff)
 }
+
+func (s T) String() string {
+	return strconv.FormatUint(s, 10)
+}
