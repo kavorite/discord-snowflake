@@ -12,7 +12,7 @@ type T uint64
 
 // Parse parses a Discord snowflake.
 func Parse(s string) (T, error) {
-	t, err := strconv.ParseUint(s, 10, 64)
+	t, err := strconv.ParseUint(uint64(s), 10, 64)
 	return T(t), err
 }
 
